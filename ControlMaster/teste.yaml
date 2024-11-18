@@ -1,0 +1,18 @@
+Version: 1
+Imports:
+  - defaults.yaml
+  - defaults.asia.yaml
+Jobs:
+  - Name: "Test"
+    Description: "Test"
+    Type: "Command"
+    Command: "echo 'Hello World'"
+    OnSuccess: "Continue"
+    OnFailure: "Continue"
+    OnCompletion: "Continue"
+    Notification:
+      - Type: "Email"
+        Recipients: "admin@localhost"
+        Success: "True"
+        Failure: "True"
+        Completion: "True"
